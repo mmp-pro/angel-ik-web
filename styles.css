@@ -323,7 +323,7 @@ img {
 .productos {
   padding: 100px 0;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/quuen.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/queen.jpg');
   background-attachment: fixed;
   background-position: center;
   color: var(--white);
@@ -394,7 +394,7 @@ img {
 .articulos {
   padding: 100px 0;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/log1.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/queen.jpg');
   background-attachment: fixed;
   background-position: center;
   color: var(--white);
