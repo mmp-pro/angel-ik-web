@@ -745,7 +745,7 @@ img {
 
 .subcategory-card {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-              url('img/log.png');
+              url('img/pared.jpg');
   background-size: cover;
   background-position: center;
   border: 3px solid var(--primary);
