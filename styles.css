@@ -484,7 +484,7 @@ img {
 /* ===== PORTAFOLIO (FONDO: PLUMAS + CÍRCULOS CON IMAGEN) ===== */
 .portafolio {
   padding: 100px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/log.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('img/2.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
