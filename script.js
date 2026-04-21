@@ -1,106 +1,136 @@
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
+if (window.scrollY > 50) {
+navbar.classList.add('scrolled');
+} else {
+navbar.classList.remove('scrolled');
+}
 });
 
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('active'));
+hamburger.addEventListener('click', () => {
+navLinks.classList.toggle('active');
+});
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('active'));
+link.addEventListener('click', () => {
+navLinks.classList.remove('active');
+});
 });
 
 // ===== SCROLL TO TOP =====
 const scrollTopBtn = document.getElementById('scrollTop');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 500) scrollTopBtn.classList.add('visible');
-  else scrollTopBtn.classList.remove('visible');
+if (window.scrollY > 500) {
+scrollTopBtn.classList.add('visible');
+} else {
+scrollTopBtn.classList.remove('visible');
+}
 });
-scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+scrollTopBtn.addEventListener('click', () => {
+window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // ===== REVEAL ON SCROLL =====
 const reveals = document.querySelectorAll('.reveal');
 const revealOnScroll = () => {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 120) el.classList.add('active');
-  });
+reveals.forEach(el => {
+const windowHeight = window.innerHeight;
+const elementTop = el.getBoundingClientRect().top;
+const revealPoint = 120;
+if (elementTop < windowHeight - revealPoint) {
+el.classList.add('active');
+}
+});
 };
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
-// ===== FORM SUBMIT =====
+// ===== FORM SUBMIT - WHATSAPP =====
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('¡Mensaje enviado con éxito! Te contactaremos pronto. 🌸');
-  this.reset();
+e.preventDefault();
+
+// Obtener los datos del formulario
+const nombre = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const asunto = document.getElementById('subject').value;
+const mensaje = document.getElementById('message').value;
+
+// Número de WhatsApp (sin espacios ni símbolos)
+const whatsappNumber = '525535865673';
+
+// Crear el mensaje formateado
+const whatsappMessage = `*Nuevo mensaje de contacto* 🌸
+
+*Nombre:* ${nombre}
+*Email:* ${email}
+*Asunto:* ${asunto}
+
+*Mensaje:*
+${mensaje}
+
+---
+Enviado desde Angelik-Page-Shop`;
+
+// Codificar el mensaje para URL
+const encodedMessage = encodeURIComponent(whatsappMessage);
+
+// Crear la URL de WhatsApp
+const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+// Abrir WhatsApp en nueva pestaña
+window.open(whatsappURL, '_blank');
+
+// Opcional: Limpiar el formulario
+this.reset();
+
+// Mensaje de confirmación
+alert('¡Gracias por contactarnos! 🌸\n\nSerás redirigido a WhatsApp para enviar tu mensaje.');
 });
 
-// ===== ZOOM / LIGHTBOX =====
+// ===== ZOOM / LIGHTBOX DE IMÁGENES =====
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
 
-document.querySelectorAll('.gallery-item img').forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  });
-});
-
-const closeLightbox = () => {
-  lightbox.style.display = 'none';
-  document.body.style.overflow = 'auto';
-};
-lightboxClose.addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-
 // ===== MODALES DE GALERÍA =====
+// Función para abrir el modal
 function openModal(modalName) {
-  const modal = document.getElementById('modal-' + modalName);
-  if (modal) { modal.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+const modal = document.getElementById('modal-' + modalName);
+if (modal) {
+modal.style.display = 'block';
+document.body.style.overflow = 'hidden';
 }
+}
+
+// Función para cerrar el modal
 function closeModal(modalName) {
-  const modal = document.getElementById('modal-' + modalName);
-  if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+const modal = document.getElementById('modal-' + modalName);
+if (modal) {
+modal.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
 }
 
-// ===== SUBCATEGORÍAS =====
-function openSubcategory(category) {
-  const sub = document.getElementById('subcategory-' + category);
-  if (sub) { sub.style.display = 'block'; document.body.style.overflow = 'hidden'; }
-}
-function closeSubcategory(category) {
-  const sub = document.getElementById('subcategory-' + category);
-  if (sub) { sub.style.display = 'none'; document.body.style.overflow = 'auto'; }
-}
-
-// ===== CONTROLADOR GLOBAL DE CIERRE (EVITA DUPLICADOS) =====
+// Cerrar modal al hacer clic fuera de la imagen
 window.onclick = function(event) {
-  if (!event.target.classList.contains('modal')) return;
-  
-  if (event.target.id.startsWith('subcategory-')) {
-    closeSubcategory(event.target.id.replace('subcategory-', ''));
-  } else {
-    event.target.style.display = 'none';
-    document.body.style.overflow = 'auto';
-  }
-};
+if (event.target.classList.contains('modal')) {
+event.target.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+}
 
+// Cerrar modal con tecla ESC
 document.addEventListener('keydown', function(event) {
-  if (event.key !== 'Escape') return;
-  
-  if (lightbox.style.display === 'flex') { closeLightbox(); return; }
-  
-  const sub = document.querySelector('.subcategory-modal[style*="display: block"]');
-  if (sub) { closeSubcategory(sub.id.replace('subcategory-', '')); return; }
-  
-  const modal = document.querySelector('.modal[style*="display: block"]:not(.subcategory-modal)');
-  if (modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+if (event.key === 'Escape') {
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+if (modal.style.display === 'block') {
+modal.style.display = 'none';
+document.body.style.overflow = 'auto';
+}
+});
+}
 });
