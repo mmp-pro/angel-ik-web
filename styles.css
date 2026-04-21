@@ -394,7 +394,7 @@ img {
 .articulos {
   padding: 100px 0;
   background-size: cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/queen.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/2.jpg');
   background-attachment: fixed;
   background-position: center;
   color: var(--white);
