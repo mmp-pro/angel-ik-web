@@ -1265,8 +1265,14 @@ img {
     padding: 25px 15px;
   }
 }
-/* ===== SUBCATEGORÍAS COMPACTAS (NUEVO DISEÑO) ===== */
-.subcategory-compact {
+
+/* ===== SUBCATEGORÍAS COMPACTAS ===== */
+.subcategory-modal .modal-content {
+  max-width: 700px;
+  padding: 40px 30px;
+}
+
+.subcategory-grid {
   display: flex;
   flex-direction: column;
   gap: 12px;
