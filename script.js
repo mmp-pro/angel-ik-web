@@ -168,46 +168,51 @@ function closeSubcategory(category) {
   }
 }
 
-// ... (Deja intacto todo lo de arriba: Navbar, Scroll, Reveal) ...
+// ===== CONTROLADOR GLOBAL DE CIERRE (UNIFICADO) =====
 
-// ===== CONTROL DE MODALES UNIFICADO =====
-
-// Función para cerrar TODO (Lightbox, Subcategorías, Modales normales)
-function closeAll() {
-    // Cerrar Lightbox
-    const lightbox = document.getElementById('lightbox');
-    if (lightbox) lightbox.style.display = 'none';
-
-    // Cerrar todos los modales
-    document.querySelectorAll('.modal').forEach(modal => {
-        modal.style.display = 'none';
-    });
-
-    // Restaurar scroll
-    document.body.style.overflow = 'auto';
-}
-
-// Cerrar al hacer clic fuera (Overlay oscuro)
+// Cerrar al hacer clic fuera del modal
 window.onclick = function(event) {
-    if (event.target.classList.contains('modal') || event.target.classList.contains('lightbox-overlay')) {
-        closeAll();
-    }
-}
+  // Si es un modal de subcategoría
+  if (event.target.classList.contains('modal') && event.target.id.startsWith('subcategory-')) {
+    const category = event.target.id.replace('subcategory-', '');
+    closeSubcategory(category);
+  }
+  // Si es un modal normal de galería
+  else if (event.target.classList.contains('modal') && !event.target.id.startsWith('subcategory-')) {
+    event.target.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  // Si es el lightbox
+  else if (event.target.classList.contains('lightbox-overlay')) {
+    closeLightbox();
+  }
+};
 
 // Cerrar con tecla ESC
 document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeAll();
+  if (event.key !== 'Escape') return;
+  
+  // Cerrar lightbox primero si está abierto
+  if (lightbox.style.display === 'flex') {
+    closeLightbox();
+    return;
+  }
+  
+  // Cerrar subcategorías
+  const subcategories = document.querySelectorAll('.subcategory-modal');
+  subcategories.forEach(modal => {
+    if (modal.style.display === 'block') {
+      const category = modal.id.replace('subcategory-', '');
+      closeSubcategory(category);
     }
+  });
+  
+  // Cerrar modales normales
+  const modals = document.querySelectorAll('.modal:not(.subcategory-modal)');
+  modals.forEach(modal => {
+    if (modal.style.display === 'block') {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
 });
-
-// Funciones específicas para abrir (Asegúrate de que estas existan)
-function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Evita scroll de fondo
-}
-
-function openSubcategory(id) {
-    document.getElementById(id).style.display = 'block';
-    document.body.style.overflow = 'hidden';
-}
