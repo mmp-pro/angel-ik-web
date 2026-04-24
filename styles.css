@@ -838,16 +838,20 @@ img {
   font-size: 1.1rem;
 }
 
-.testimonio-card:nth-child(1) .author-avatar {
-  background: var(--primary);
+/* Grupos de colores repetidos para 6 testimonios */
+.testimonio-card:nth-child(1) .author-avatar,
+.testimonio-card:nth-child(4) .author-avatar {
+  background: var(--primary); /* Rosa fuerte */
 }
 
-.testimonio-card:nth-child(2) .author-avatar {
-  background: var(--secondary);
+.testimonio-card:nth-child(2) .author-avatar,
+.testimonio-card:nth-child(5) .author-avatar {
+  background: var(--secondary); /* Rosa medio */
 }
 
-.testimonio-card:nth-child(3) .author-avatar {
-  background: var(--accent);
+.testimonio-card:nth-child(3) .author-avatar,
+.testimonio-card:nth-child(6) .author-avatar {
+  background: var(--accent); /* Rosa claro */
 }
 
 .author-info h4 {
