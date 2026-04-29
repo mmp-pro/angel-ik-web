@@ -651,12 +651,13 @@
   </div>
 </div>
   
-  <!-- LIGHTBOX (ZOOM) -->
-  <div id="lightbox" class="lightbox-overlay">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Imagen ampliada">
+<!-- LIGHTBOX CON CARRUSEL -->
+<div id="lightbox" class="lightbox-overlay">
+  <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">❮</button>
+  <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">❯</button>
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+  <div class="lightbox-counter">
+    <span id="current-img">1</span> / <span id="total-imgs">10</span>
   </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+</div>
