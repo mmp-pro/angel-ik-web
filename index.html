@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Angel-ik-Site</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- FAVICON: Cambia 'favicon.png' por la ruta real de tu icono -->
   <link rel="icon" href="img/favicon.png" type="image/png">
+  <!-- Preload de imágenes críticas para mejor rendimiento -->
+  <link rel="preload" href="img/queen.jpeg" as="image">
+  <link rel="preload" href="img/2.jpeg" as="image">
+  <link rel="preload" href="img/3.jpeg" as="image">
 </head>
 <body>
 
@@ -14,8 +17,7 @@
   <nav id="navbar" class="navbar">
     <div class="container">
       <a href="#" class="logo">
-        <!-- LOGO: Cambia 'logo-angel-ik.png' por tu imagen -->
-        <img src="img/queen.jpg" alt="Angel-IK Logo" class="nav-logo-img">
+        <img src="img/queen.jpeg" alt="Angel-IK Logo" class="nav-logo-img" loading="eager" width="150" height="50">
         Angel-IK
       </a>
       <ul id="navLinks" class="nav-links">
@@ -86,8 +88,7 @@
     <div class="container">
       <div class="articulos-wrapper">
         <div class="articulos-image reveal">
-          <!-- Reemplaza con tu imagen real de Natura -->
-          <img src="img/nat.jpg" alt="Natura Ofertas">
+          <img src="img/nat.jpeg" alt="Natura Ofertas" loading="lazy" width="600" height="450">
           <div class="floating-card">
             <div class="number">Natura</div>
             <div class="label">Ofertas Especiales</div>
@@ -158,8 +159,6 @@
         <p>Testimonios reales de quienes han confiado en nosotros</p>
       </div>
       <div class="testimonios-grid">
-        
-        <!-- Testimonio 1 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"La calidad de los productos y la atención personalizada superaron todas mis expectativas. ¡Totalmente recomendado!"</p>
@@ -171,8 +170,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Testimonio 2 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"Los artículos de promoción son increíbles. Siempre encuentro ofertas que realmente valen la pena y la entrega es rápida."</p>
@@ -184,8 +181,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Testimonio 3 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"Su portafolio habla por sí solo. Profesionales, creativos y con un toque único que marca la diferencia en cada proyecto."</p>
@@ -197,8 +192,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Testimonio 4 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"Muy buena consultoral Natura y produtos de Ofertas muy buenos."</p>
@@ -210,8 +203,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Testimonio 5 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"Siempre un buen servicio y garantizado su trabajo."</p>
@@ -223,8 +214,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Testimonio 6 -->
         <div class="testimonio-card reveal">
           <div class="stars">★★★★★</div>
           <p>"Sin duda su trabajo respalda su profesionalismo en cada detalle."</p>
@@ -236,7 +225,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -301,9 +289,7 @@
   <!-- SCROLL TO TOP -->
   <button id="scrollTop" class="scroll-top">↑</button>
 
-  <!-- ========================================== -->
-  <!-- MODALES DE SUBCATEGORÍAS (Nivel intermedio) -->
-  <!-- ========================================== -->
+  <!-- MODALES DE SUBCATEGORÍAS -->
   <div id="subcategory-hogar" class="modal subcategory-modal">
     <div class="modal-content">
       <span class="close-modal" onclick="closeSubcategory('hogar')">&times;</span>
@@ -344,7 +330,7 @@
     </div>
   </div>
 
-  <!-- ===== MODALES DE GALERÍA ===== -->
+  <!-- ===== MODALES DE GALERÍA (OPTIMIZADOS CON WEBP) ===== -->
 
 <!-- HOGAR -->
 <div id="modal-hogar-pared" class="modal">
@@ -353,27 +339,13 @@
     <h2> Para tu Pared</h2>
     <p>Cuadros y adornos decorativos ANGEL-IK</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad009.png" alt="Adorno9"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado10.png" alt="Adorn10"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado11.png" alt="Adorno11"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado12.png" alt="Adorno12"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado13.png" alt="Adorno13"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado14.png" alt="Adorno14"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ado15.png" alt="Adorno15"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad009.webp" alt="Adorno9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado10.webp" alt="Adorn10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado11.webp" alt="Adorno11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado12.webp" alt="Adorno12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado13.webp" alt="Adorno13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado14.webp" alt="Adorno14" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ado15.webp" alt="Adorno15" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -384,48 +356,20 @@
     <h2> Centros de Mesa</h2>
     <p>Decoración para mesas</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Centros/cm001.png" alt="ctr1"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Centros/cm002.png" alt="ctr2"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Centros/cm012.png" alt="ctr12"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm004.png" alt="ctr4"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm005.png" alt="ctr5"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm006.png" alt="ctr6"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm007.png" alt="ctr7"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm008.png" alt="ctr8"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm009.png" alt="ctr9"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm010.png" alt="ctr10"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm011.png" alt="ctr11"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm003.png" alt="ctr3"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm013.png" alt="ctr13"> 
-      </div>
-            <div class="gallery-item">
-        <img src="Photo/Centros/cm014.png" alt="ctr14"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Centros/cm001.webp" alt="ctr1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm002.webp" alt="ctr2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm012.webp" alt="ctr12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm004.webp" alt="ctr4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm005.webp" alt="ctr5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm006.webp" alt="ctr6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm007.webp" alt="ctr7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm008.webp" alt="ctr8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm009.webp" alt="ctr9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm010.webp" alt="ctr10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm011.webp" alt="ctr11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm003.webp" alt="ctr3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm013.webp" alt="ctr13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Centros/cm014.webp" alt="ctr14" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -436,30 +380,14 @@
     <h2> Decoración General</h2>
     <p>Adornos varios para el hogar</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad001.png" alt="Adorno1">
-      </div>
-      <div class="gallery-item">
-       <img src="Photo/Adorno/ad002.png" alt="Adorno2">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad003.png" alt="Adorno3"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad004.png" alt="Adorno4"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad005.png" alt="Adorno5"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad006.png" alt="Adorno6"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad007.png" alt="Adorno7"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Adorno/ad008.png" alt="Adorno8"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad001.webp" alt="Adorno1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad002.webp" alt="Adorno2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad003.webp" alt="Adorno3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad004.webp" alt="Adorno4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad005.webp" alt="Adorno5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad006.webp" alt="Adorno6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad007.webp" alt="Adorno7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Adorno/ad008.webp" alt="Adorno8" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -470,17 +398,11 @@
     <span class="close-modal" onclick="closeModal('fiestas-invitaciones')">&times;</span>
     <h2> Invitaciones Digitales</h2>
     <p>Diseños para toda ocasión</p>
-    
-    <!-- Contenedor Grid para las imágenes -->
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Invitaciones/invi001.png" alt="Invitacion1">
-      </div>
-      <!-- Puedes agregar más gallery-item aquí -->
+      <div class="gallery-item"><img src="Photo/Invitaciones/invi001.webp" alt="Invitacion1" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
-
 
 <div id="modal-fiestas-mesas" class="modal">
   <div class="modal-content">
@@ -488,45 +410,19 @@
     <h2> Mesas de Dulces</h2>
     <p>Decoración y dulceros</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr001.png" alt="Arreglo 1">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr002.png" alt="Arreglo 2">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr003.png" alt="Arreglo 3"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr004.png" alt="Arreglo 4"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr005.png" alt="Arreglo 5"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr006.png" alt="Arreglo 6"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr007.png" alt="Arreglo 7"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr008.png" alt="Arreglo 8"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr009.png" alt="Arreglo 9">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr010.png" alt="Arreglo 10"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr011.png" alt="Arreglo 11"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr012.png" alt="Arreglo 12"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Arreglos/arr013.png" alt="Arreglo 13"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr001.webp" alt="Arreglo 1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr002.webp" alt="Arreglo 2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr003.webp" alt="Arreglo 3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr004.webp" alt="Arreglo 4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr005.webp" alt="Arreglo 5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr006.webp" alt="Arreglo 6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr007.webp" alt="Arreglo 7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr008.webp" alt="Arreglo 8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr009.webp" alt="Arreglo 9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr010.webp" alt="Arreglo 10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr011.webp" alt="Arreglo 11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr012.webp" alt="Arreglo 12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Arreglos/arr013.webp" alt="Arreglo 13" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -537,33 +433,15 @@
     <h2> Decoración de Eventos</h2>
     <p>Adornos para fiestas</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal001.png" alt="Salon1">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal002.png" alt="Salon2">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal003.png" alt="Salon3">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal004.png" alt="Salon4">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal005.png" alt="Salon5">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal006.png" alt="Salon6">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal007.png" alt="Salon7">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal008.png" alt="Salon8">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Salon/sal010.png" alt="Salon10">
-      </div>
+      <div class="gallery-item"><img src="Photo/Salon/sal001.webp" alt="Salon1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal002.webp" alt="Salon2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal003.webp" alt="Salon3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal004.webp" alt="Salon4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal005.webp" alt="Salon5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal006.webp" alt="Salon6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal007.webp" alt="Salon7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal008.webp" alt="Salon8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Salon/sal010.webp" alt="Salon10" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -574,192 +452,68 @@
     <h2> Dulceros</h2>
     <p>Dulceros para fiestas y todo tipo de eventos</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Dulceros/dul001.png" alt="Dulcero1">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul002.png" alt="Dulcero2">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul003.png" alt="Dulcero3">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul004.png" alt="Dulcero4">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Dulceros/dul005.png" alt="Dulcero5">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul006.png" alt="Dulcero6">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul007.png" alt="Dulcero7">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul008.png" alt="Dulcero8">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul009.png" alt="Dulcero9">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Dulceros/dul010.png" alt="Dulcero10">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul011.png" alt="Dulcero11">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul012.png" alt="Dulcero12">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul013.png" alt="Dulcero13">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul014.png" alt="Dulcero14">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul015.png" alt="Dulcero15">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul016.png" alt="Dulcero16">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul017.png" alt="Dulcero17">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul018.png" alt="Dulcero18">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul019.png" alt="Dulcero19">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul020.png" alt="Dulcero20">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul021.png" alt="Dulcero21">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul022.png" alt="Dulcero22">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul023.png" alt="Dulcero23">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul024.png" alt="Dulcero24">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul025.png" alt="Dulcero25">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul026.png" alt="Dulcero26">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul027.png" alt="Dulcero27">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul028.png" alt="Dulcero28">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul029.png" alt="Dulcero29">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul030.png" alt="Dulcero30">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul031.png" alt="Dulcero31">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul032.png" alt="Dulcero32">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul033.png" alt="Dulcero33">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul034.png" alt="Dulcero34">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul035.png" alt="Dulcero35">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul036.png" alt="Dulcero36">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul037.png" alt="Dulcero37">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul038.png" alt="Dulcero38">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul039.png" alt="Dulcero39">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul040.png" alt="Dulcero40">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul041.png" alt="Dulcero41">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul042.png" alt="Dulcero42">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul043.png" alt="Dulcero43">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul044.png" alt="Dulcero44">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul045.png" alt="Dulcero45">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul046.png" alt="Dulcero46">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul047.png" alt="Dulcero47">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul048.png" alt="Dulcero48">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul049.png" alt="Dulcero49">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul050.jpeg" alt="Dulcero50">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul051.jpeg" alt="Dulcero51">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul052.jpeg" alt="Dulcero52">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul053.jpeg" alt="Dulcero53">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul054.jpeg" alt="Dulcero54">
-      </div>
-          <div class="gallery-item">
-         <img src="Photo/Dulceros/dul055.jpeg" alt="Dulcero55">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul056.jpeg" alt="Dulcero56">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul057.jpeg" alt="Dulcero57">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul058.jpeg" alt="Dulcero58">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul059.jpeg" alt="Dulcero59">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul060.jpeg" alt="Dulcero60">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul061.jpeg" alt="Dulcero61">
-      </div>
-        <div class="gallery-item">
-         <img src="Photo/Dulceros/dul062.jpeg" alt="Dulcero62">
-      </div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul001.webp" alt="Dulcero1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul002.webp" alt="Dulcero2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul003.webp" alt="Dulcero3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul004.webp" alt="Dulcero4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul005.webp" alt="Dulcero5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul006.webp" alt="Dulcero6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul007.webp" alt="Dulcero7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul008.webp" alt="Dulcero8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul009.webp" alt="Dulcero9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul010.webp" alt="Dulcero10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul011.webp" alt="Dulcero11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul012.webp" alt="Dulcero12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul013.webp" alt="Dulcero13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul014.webp" alt="Dulcero14" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul015.webp" alt="Dulcero15" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul016.webp" alt="Dulcero16" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul017.webp" alt="Dulcero17" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul018.webp" alt="Dulcero18" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul019.webp" alt="Dulcero19" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul020.webp" alt="Dulcero20" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul021.webp" alt="Dulcero21" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul022.webp" alt="Dulcero22" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul023.webp" alt="Dulcero23" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul024.webp" alt="Dulcero24" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul025.webp" alt="Dulcero25" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul026.webp" alt="Dulcero26" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul027.webp" alt="Dulcero27" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul028.webp" alt="Dulcero28" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul029.webp" alt="Dulcero29" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul030.webp" alt="Dulcero30" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul031.webp" alt="Dulcero31" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul032.webp" alt="Dulcero32" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul033.webp" alt="Dulcero33" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul034.webp" alt="Dulcero34" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul035.webp" alt="Dulcero35" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul036.webp" alt="Dulcero36" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul037.webp" alt="Dulcero37" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul038.webp" alt="Dulcero38" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul039.webp" alt="Dulcero39" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul040.webp" alt="Dulcero40" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul041.webp" alt="Dulcero41" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul042.webp" alt="Dulcero42" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul043.webp" alt="Dulcero43" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul044.webp" alt="Dulcero44" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul045.webp" alt="Dulcero45" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul046.webp" alt="Dulcero46" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul047.webp" alt="Dulcero47" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul048.webp" alt="Dulcero48" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul049.webp" alt="Dulcero49" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul050.webp" alt="Dulcero50" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul051.webp" alt="Dulcero51" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul052.webp" alt="Dulcero52" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul053.webp" alt="Dulcero53" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul054.webp" alt="Dulcero54" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul055.webp" alt="Dulcero55" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul056.webp" alt="Dulcero56" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul057.webp" alt="Dulcero57" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul058.webp" alt="Dulcero58" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul059.webp" alt="Dulcero59" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul060.webp" alt="Dulcero60" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul061.webp" alt="Dulcero61" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Dulceros/dul062.webp" alt="Dulcero62" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -771,54 +525,22 @@
     <h2>👗 Ropa Dama</h2>
     <p>Prendas para mujer</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop002.png" alt="Ropa2"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop003.png" alt="Ropa3"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop004.png" alt="Ropa4"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop005.png" alt="Ropa5"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop006.png" alt="Ropa6"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop007.png" alt="Ropa7"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop008.png" alt="Ropa8"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop009.png" alt="Ropa9"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop010.png" alt="Ropa10"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop011.png" alt="Ropa11"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop012.png" alt="Ropa12"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop013.png" alt="Ropa13"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop014.png" alt="Ropa14"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop015.png" alt="Ropa15"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop016.png" alt="Ropa16"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop021.png" alt="Ropa21"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop002.webp" alt="Ropa2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop003.webp" alt="Ropa3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop004.webp" alt="Ropa4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop005.webp" alt="Ropa5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop006.webp" alt="Ropa6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop007.webp" alt="Ropa7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop008.webp" alt="Ropa8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop009.webp" alt="Ropa9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop010.webp" alt="Ropa10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop011.webp" alt="Ropa11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop012.webp" alt="Ropa12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop013.webp" alt="Ropa13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop014.webp" alt="Ropa14" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop015.webp" alt="Ropa15" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop016.webp" alt="Ropa16" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop021.webp" alt="Ropa21" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -829,21 +551,11 @@
     <h2>👔 Ropa Caballero</h2>
     <p>Prendas para hombre</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop001.png" alt="Ropa1"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop017.png" alt="Ropa17"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop018.png" alt="Ropa18"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop019.png" alt="Ropa19"> 
-      </div>
-       <div class="gallery-item">
-        <img src="Photo/Ropa/rop020.png" alt="Ropa20"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop001.webp" alt="Ropa1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop017.webp" alt="Ropa17" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop018.webp" alt="Ropa18" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop019.webp" alt="Ropa19" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop020.webp" alt="Ropa20" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -851,29 +563,23 @@
 <div id="modal-ropa-accesorios" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('ropa-accesorios')">&times;</span>
-    <h2>👜 Accesorios</h2>
+    <h2> Accesorios</h2>
     <p>Bolsos, cinturones, etc.</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop022.png" alt="Ropa22"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Ropa/rop023.png" alt="Ropa23"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop022.webp" alt="Ropa22" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Ropa/rop023.webp" alt="Ropa23" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
 
-<!-- DIRECTOS (Cuidado, School, Regalos) -->
+<!-- DIRECTOS -->
 <div id="modal-cuidado" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('cuidado')">&times;</span>
-    <h2>💄 Cuidado Personal - Natura</h2>
+    <h2> Cuidado Personal - Natura</h2>
     <p>Cremas, perfumes, maquillaje y productos de belleza</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="https://via.placeholder.com/400x300/d63384/ffffff?text=Natura+1" alt="Natura 1">
-      </div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/400x300/d63384/ffffff?text=Natura+1" alt="Natura 1" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -881,69 +587,29 @@
 <div id="modal-school" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('school')">&times;</span>
-    <h2>📚 Back to School</h2>
+    <h2> Back to School</h2>
     <p>Cuadernos, plumas, lápices y útiles escolares</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs001.png" alt="Regreso1">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs002.png" alt="Regreso2">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs003.png" alt="Regreso3">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs004.png" alt="Regreso4">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs005.png" alt="Regreso5">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs005.png" alt="Regreso5">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs006.png" alt="Regreso6">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs007.png" alt="Regreso7">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs008.png" alt="Regreso8">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs009.png" alt="Regreso9">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs010.png" alt="Regreso10">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs011.png" alt="Regreso11">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs012.png" alt="Regreso12">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs013.png" alt="Regreso13">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs014.png" alt="Regreso14">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs015.png" alt="Regreso15">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs016.png" alt="Regreso16">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs017.png" alt="Regreso17">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs018.png" alt="Regreso18">
-      </div>
-      <div class="gallery-item">
-         <img src="Photo/Backtoschool/bs019.png" alt="Regreso19">
-      </div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs001.webp" alt="Regreso1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs002.webp" alt="Regreso2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs003.webp" alt="Regreso3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs004.webp" alt="Regreso4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs005.webp" alt="Regreso5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs005.webp" alt="Regreso5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs006.webp" alt="Regreso6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs007.webp" alt="Regreso7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs008.webp" alt="Regreso8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs009.webp" alt="Regreso9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs010.webp" alt="Regreso10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs011.webp" alt="Regreso11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs012.webp" alt="Regreso12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs013.webp" alt="Regreso13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs014.webp" alt="Regreso14" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs015.webp" alt="Regreso15" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs016.webp" alt="Regreso16" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs017.webp" alt="Regreso17" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs018.webp" alt="Regreso18" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Backtoschool/bs019.webp" alt="Regreso19" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -951,84 +617,34 @@
 <div id="modal-regalos" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('regalos')">&times;</span>
-    <h2>🎁 Regalos Personalizados</h2>
+    <h2> Regalos Personalizados</h2>
     <p>Arreglos buchonés, ramos de dulces, cajas sorpresa</p>
     <div class="modal-gallery">
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg001.png" alt="regalo1">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg002.png" alt="regalo2">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg003.png" alt="regalo3">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg004.png" alt="regalo4">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg005.png" alt="regalo5"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg006.png" alt="regalo6">
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg007.png" alt="regalo7"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg008.png" alt="regalo8"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg009.png" alt="regalo9"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg010.png" alt="regalo10"> 
-      </div>
-        <div class="gallery-item">
-        <img src="Photo/Regalos/reg011.png" alt="regalo11"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg012.png" alt="regalo12"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg013.png" alt="regalo13"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg014.png" alt="regalo14"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg015.png" alt="regalo15"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg016.png" alt="regalo16"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg017.png" alt="regalo17"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg018.png" alt="regalo18"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg019.png" alt="regalo19"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg020.png" alt="regalo20"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg021.png" alt="regalo21"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg022.png" alt="regalo22"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg023.png" alt="regalo23"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg024.png" alt="regalo24"> 
-      </div>
-      <div class="gallery-item">
-        <img src="Photo/Regalos/reg025.png" alt="regalo25"> 
-      </div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg001.webp" alt="regalo1" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg002.webp" alt="regalo2" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg003.webp" alt="regalo3" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg004.webp" alt="regalo4" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg005.webp" alt="regalo5" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg006.webp" alt="regalo6" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg007.webp" alt="regalo7" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg008.webp" alt="regalo8" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg009.webp" alt="regalo9" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg010.webp" alt="regalo10" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg011.webp" alt="regalo11" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg012.webp" alt="regalo12" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg013.webp" alt="regalo13" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg014.webp" alt="regalo14" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg015.webp" alt="regalo15" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg016.webp" alt="regalo16" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg017.webp" alt="regalo17" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg018.webp" alt="regalo18" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg019.webp" alt="regalo19" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg020.webp" alt="regalo20" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg021.webp" alt="regalo21" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg022.webp" alt="regalo22" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg023.webp" alt="regalo23" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg024.webp" alt="regalo24" loading="lazy" decoding="async" width="400" height="300"></div>
+      <div class="gallery-item"><img src="Photo/Regalos/reg025.webp" alt="regalo25" loading="lazy" decoding="async" width="400" height="300"></div>
     </div>
   </div>
 </div>
@@ -1042,4 +658,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
