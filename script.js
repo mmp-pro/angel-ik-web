@@ -90,39 +90,31 @@ Enviado desde Angelik-Page-Shop`;
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
-const currentImgSpan = document.getElementById('current-img');
-const totalImgsSpan = document.getElementById('total-imgs');
 
+// Variables del carrusel (declaradas globalmente)
 let currentImageIndex = 0;
 let galleryImages = [];
 let startX = 0;
 let endX = 0;
 
 // Abrir Lightbox con imágenes de la galería
-document.querySelectorAll('.gallery-item img').forEach((img, index) => {
+document.querySelectorAll('.gallery-item img').forEach((img) => {
   img.addEventListener('click', () => {
     const gallery = img.closest('.modal-gallery');
+    if (!gallery) return;
+    
     galleryImages = Array.from(gallery.querySelectorAll('img'));
     currentImageIndex = galleryImages.indexOf(img);
-    openLightbox(currentImageIndex);
+    
+    // Mostrar lightbox
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   });
 });
 
-function openLightbox(index) {
-  if (galleryImages.length === 0) return;
-  
-  currentImageIndex = index;
-  updateLightboxImage();
-  lightbox.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-  
-  // Actualizar contador si existe
-  if (currentImgSpan && totalImgsSpan) {
-    currentImgSpan.textContent = currentImageIndex + 1;
-    totalImgsSpan.textContent = galleryImages.length;
-  }
-}
-
+// Función para cambiar imagen (carrusel)
 function changeImage(direction) {
   if (galleryImages.length === 0) return;
   
@@ -135,34 +127,16 @@ function changeImage(direction) {
     currentImageIndex = 0;
   }
   
-  updateLightboxImage();
-  
-  // Actualizar contador si existe
-  if (currentImgSpan) {
-    currentImgSpan.textContent = currentImageIndex + 1;
-  }
-}
-
-function updateLightboxImage() {
-  // Animación de salida
+  // Actualizar imagen con animación
   lightboxImg.style.opacity = '0';
-  lightboxImg.style.transform = 'scale(0.95)';
-  
   setTimeout(() => {
     lightboxImg.src = galleryImages[currentImageIndex].src;
     lightboxImg.alt = galleryImages[currentImageIndex].alt;
-    
-    // Animación de entrada
     lightboxImg.style.opacity = '1';
-    lightboxImg.style.transform = 'scale(1)';
-    lightboxImg.classList.add('lightbox-img-anim');
-    
-    setTimeout(() => {
-      lightboxImg.classList.remove('lightbox-img-anim');
-    }, 300);
   }, 150);
 }
 
+// Cerrar lightbox
 function closeLightbox() {
   lightbox.style.display = 'none';
   document.body.style.overflow = 'auto';
@@ -170,26 +144,33 @@ function closeLightbox() {
 }
 
 // Cerrar con botón X
-lightboxClose.addEventListener('click', closeLightbox);
+lightboxClose?.addEventListener('click', closeLightbox);
 
-// Cerrar al hacer clic fuera de la imagen
+// Cerrar al hacer clic fuera
 lightbox.addEventListener('click', (e) => {
-  if (e.target === lightbox) {
-    closeLightbox();
-  }
+  if (e.target === lightbox) closeLightbox();
 });
 
-// Navegación con teclado
+// Teclado: flechas para navegar
 document.addEventListener('keydown', (e) => {
   if (lightbox.style.display !== 'flex') return;
-  
-  if (e.key === 'ArrowLeft') {
-    changeImage(-1);
-  } else if (e.key === 'ArrowRight') {
-    changeImage(1);
-  } else if (e.key === 'Escape') {
-    closeLightbox();
-  }
+  if (e.key === 'ArrowLeft') changeImage(-1);
+  else if (e.key === 'ArrowRight') changeImage(1);
+  else if (e.key === 'Escape') closeLightbox();
+});
+
+// Swipe en móvil
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', () => {
+  if (startX - endX > 50) changeImage(1);      // Swipe izquierda → siguiente
+  else if (endX - startX > 50) changeImage(-1); // Swipe derecha → anterior
 });
 
 // ===== SOPORTE PARA SWIPE EN MÓVILES =====
