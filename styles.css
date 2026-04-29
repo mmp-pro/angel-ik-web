@@ -1265,7 +1265,7 @@ img {
     gap: 20px;
   }
 
-  /* ===== LIGHTBOX CON CARRUSEL ===== */
+ /* ===== LIGHTBOX CON CARRUSEL ===== */
 .lightbox-overlay {
   display: none;
   position: fixed;
@@ -1339,34 +1339,6 @@ img {
   z-index: 3002;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .lightbox-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-  
-  .lightbox-prev {
-    left: 10px;
-  }
-  
-  .lightbox-next {
-    right: 10px;
-  }
-  
-  #lightbox-img {
-    max-width: 95%;
-    max-height: 85%;
-  }
-  
-  .lightbox-counter {
-    bottom: 15px;
-    font-size: 0.9rem;
-    padding: 6px 15px;
-  }
-}
-
 /* Animación de cambio de imagen */
 @keyframes slideIn {
   from {
@@ -1382,8 +1354,186 @@ img {
 .lightbox-img-anim {
   animation: slideIn 0.3s ease;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .productos-grid,
+  .testimonios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .articulos-wrapper,
+  .contacto-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .articulos-image img {
+    height: 350px;
+  }
+  
+  .articulos-image .floating-card {
+    right: 10px;
+    bottom: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    transition: var(--transition);
+    padding: 40px;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    color: var(--white) !important;
+    font-size: 1.2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .productos-grid,
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .articulos-stats {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .portafolio-circles {
+    gap: 25px;
+  }
+  
+  .circle-item {
+    width: 240px;
+    height: 240px;
+    padding: 20px;
+  }
+  
+  .circle-icon {
+    font-size: 2.8rem;
+  }
+  
+  .circle-item h3 {
+    font-size: 0.95rem;
+  }
+  
+  .circle-item p {
+    font-size: 0.8rem;
+  }
+  
+  .modal-content {
+    padding: 30px 20px;
+    margin: 20px auto;
+    width: 95%;
+  }
+  
+  .modal-content h2 {
+    font-size: 1.5rem;
+    padding-right: 50px;
+  }
+  
+  .close-modal {
+    top: 15px;
+    right: 15px;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .modal-gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .gallery-item img {
+    height: 220px;
+  }
+  
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+  
+  #lightbox-img {
+    max-width: 95%;
+  }
+  
+  .nav-logo-img {
+    height: 40px;
+  }
+  
+  /* Responsive para subcategorías en móvil */
+  .subcategory-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
   
   .subcategory-card {
     padding: 25px 15px;
+  }
+  
+  /* Ajustes responsive del carrusel */
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .lightbox-prev {
+    left: 10px;
+  }
+  
+  .lightbox-next {
+    right: 10px;
+  }
+  
+  .lightbox-counter {
+    bottom: 15px;
+    font-size: 0.9rem;
+    padding: 6px 15px;
   }
 }
