@@ -59,16 +59,13 @@ window.addEventListener('load', revealOnScroll);
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
-  // Obtener los datos del formulario
   const nombre = document.getElementById('name').value;
   const email = document.getElementById('email').value;
   const asunto = document.getElementById('subject').value;
   const mensaje = document.getElementById('message').value;
   
-  // Número de WhatsApp (sin espacios ni símbolos)
   const whatsappNumber = '525535865673';
   
-  // Crear el mensaje formateado
   const whatsappMessage = `*Nuevo mensaje de contacto* 🌸
 
 *Nombre:* ${nombre}
@@ -81,42 +78,96 @@ ${mensaje}
 ---
 Enviado desde Angelik-Page-Shop`;
   
-  // Codificar el mensaje para URL
   const encodedMessage = encodeURIComponent(whatsappMessage);
-  
-  // Crear la URL de WhatsApp
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
   
-  // Abrir WhatsApp en nueva pestaña
   window.open(whatsappURL, '_blank');
-  
-  // Limpiar el formulario
   this.reset();
-  
-  // Mensaje de confirmación
   alert('¡Gracias por contactarnos! 🌸\n\nSerás redirigido a WhatsApp para enviar tu mensaje.');
 });
 
-// ===== ZOOM / LIGHTBOX DE IMÁGENES =====
+// ===== LIGHTBOX CON CARRUSEL =====
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('.lightbox-close');
+const currentImgSpan = document.getElementById('current-img');
+const totalImgsSpan = document.getElementById('total-imgs');
 
-// Abrir Lightbox al hacer clic en una imagen
-document.querySelectorAll('.gallery-item img').forEach(img => {
+let currentImageIndex = 0;
+let galleryImages = [];
+let startX = 0;
+let endX = 0;
+
+// Abrir Lightbox con imágenes de la galería
+document.querySelectorAll('.gallery-item img').forEach((img, index) => {
   img.addEventListener('click', () => {
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    const gallery = img.closest('.modal-gallery');
+    galleryImages = Array.from(gallery.querySelectorAll('img'));
+    currentImageIndex = galleryImages.indexOf(img);
+    openLightbox(currentImageIndex);
   });
 });
 
-// Función para cerrar Lightbox
-const closeLightbox = () => {
+function openLightbox(index) {
+  if (galleryImages.length === 0) return;
+  
+  currentImageIndex = index;
+  updateLightboxImage();
+  lightbox.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  
+  // Actualizar contador si existe
+  if (currentImgSpan && totalImgsSpan) {
+    currentImgSpan.textContent = currentImageIndex + 1;
+    totalImgsSpan.textContent = galleryImages.length;
+  }
+}
+
+function changeImage(direction) {
+  if (galleryImages.length === 0) return;
+  
+  currentImageIndex += direction;
+  
+  // Loop infinito
+  if (currentImageIndex < 0) {
+    currentImageIndex = galleryImages.length - 1;
+  } else if (currentImageIndex >= galleryImages.length) {
+    currentImageIndex = 0;
+  }
+  
+  updateLightboxImage();
+  
+  // Actualizar contador si existe
+  if (currentImgSpan) {
+    currentImgSpan.textContent = currentImageIndex + 1;
+  }
+}
+
+function updateLightboxImage() {
+  // Animación de salida
+  lightboxImg.style.opacity = '0';
+  lightboxImg.style.transform = 'scale(0.95)';
+  
+  setTimeout(() => {
+    lightboxImg.src = galleryImages[currentImageIndex].src;
+    lightboxImg.alt = galleryImages[currentImageIndex].alt;
+    
+    // Animación de entrada
+    lightboxImg.style.opacity = '1';
+    lightboxImg.style.transform = 'scale(1)';
+    lightboxImg.classList.add('lightbox-img-anim');
+    
+    setTimeout(() => {
+      lightboxImg.classList.remove('lightbox-img-anim');
+    }, 300);
+  }, 150);
+}
+
+function closeLightbox() {
   lightbox.style.display = 'none';
   document.body.style.overflow = 'auto';
-};
+  galleryImages = [];
+}
 
 // Cerrar con botón X
 lightboxClose.addEventListener('click', closeLightbox);
@@ -128,9 +179,79 @@ lightbox.addEventListener('click', (e) => {
   }
 });
 
-// ===== MODALES DE GALERÍA =====
+// Navegación con teclado
+document.addEventListener('keydown', (e) => {
+  if (lightbox.style.display !== 'flex') return;
+  
+  if (e.key === 'ArrowLeft') {
+    changeImage(-1);
+  } else if (e.key === 'ArrowRight') {
+    changeImage(1);
+  } else if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
 
-// Función para abrir el modal
+// ===== SOPORTE PARA SWIPE EN MÓVILES =====
+lightbox.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchmove', (e) => {
+  endX = e.touches[0].clientX;
+}, { passive: true });
+
+lightbox.addEventListener('touchend', () => {
+  if (startX - endX > 50) {
+    // Swipe hacia la izquierda - siguiente imagen
+    changeImage(1);
+  } else if (endX - startX > 50) {
+    // Swipe hacia la derecha - imagen anterior
+    changeImage(-1);
+  }
+});
+
+// ===== SOPORTE PARA DRAG CON MOUSE EN PC =====
+let isDragging = false;
+let startXMouse = 0;
+
+lightbox.addEventListener('mousedown', (e) => {
+  if (e.target !== lightboxImg) return;
+  isDragging = true;
+  startXMouse = e.clientX;
+  lightboxImg.style.cursor = 'grabbing';
+});
+
+lightbox.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  const diff = e.clientX - startXMouse;
+  if (Math.abs(diff) > 50) {
+    isDragging = false;
+    lightboxImg.style.cursor = 'grab';
+    if (diff < 0) {
+      changeImage(1); // Siguiente
+    } else {
+      changeImage(-1); // Anterior
+    }
+  }
+});
+
+lightbox.addEventListener('mouseup', () => {
+  isDragging = false;
+  lightboxImg.style.cursor = 'grab';
+});
+
+lightbox.addEventListener('mouseleave', () => {
+  isDragging = false;
+  lightboxImg.style.cursor = 'grab';
+});
+
+// Cambiar cursor al entrar
+lightboxImg.addEventListener('mouseenter', () => {
+  lightboxImg.style.cursor = 'grab';
+});
+
+// ===== MODALES DE GALERÍA =====
 function openModal(modalName) {
   const modal = document.getElementById('modal-' + modalName);
   if (modal) {
@@ -139,7 +260,6 @@ function openModal(modalName) {
   }
 }
 
-// Función para cerrar el modal
 function closeModal(modalName) {
   const modal = document.getElementById('modal-' + modalName);
   if (modal) {
@@ -149,8 +269,6 @@ function closeModal(modalName) {
 }
 
 // ===== SUBCATEGORÍAS =====
-
-// Función para abrir subcategoría
 function openSubcategory(category) {
   const subcategoryModal = document.getElementById('subcategory-' + category);
   if (subcategoryModal) {
@@ -159,7 +277,6 @@ function openSubcategory(category) {
   }
 }
 
-// Función para cerrar subcategoría
 function closeSubcategory(category) {
   const subcategoryModal = document.getElementById('subcategory-' + category);
   if (subcategoryModal) {
@@ -169,36 +286,28 @@ function closeSubcategory(category) {
 }
 
 // ===== CONTROLADOR GLOBAL DE CIERRE (UNIFICADO) =====
-
-// Cerrar al hacer clic fuera del modal
 window.onclick = function(event) {
-  // Si es un modal de subcategoría
   if (event.target.classList.contains('modal') && event.target.id.startsWith('subcategory-')) {
     const category = event.target.id.replace('subcategory-', '');
     closeSubcategory(category);
   }
-  // Si es un modal normal de galería
   else if (event.target.classList.contains('modal') && !event.target.id.startsWith('subcategory-')) {
     event.target.style.display = 'none';
     document.body.style.overflow = 'auto';
   }
-  // Si es el lightbox
   else if (event.target.classList.contains('lightbox-overlay')) {
     closeLightbox();
   }
 };
 
-// Cerrar con tecla ESC
 document.addEventListener('keydown', function(event) {
   if (event.key !== 'Escape') return;
   
-  // Cerrar lightbox primero si está abierto
   if (lightbox.style.display === 'flex') {
     closeLightbox();
     return;
   }
   
-  // Cerrar subcategorías
   const subcategories = document.querySelectorAll('.subcategory-modal');
   subcategories.forEach(modal => {
     if (modal.style.display === 'block') {
@@ -207,7 +316,6 @@ document.addEventListener('keydown', function(event) {
     }
   });
   
-  // Cerrar modales normales
   const modals = document.querySelectorAll('.modal:not(.subcategory-modal)');
   modals.forEach(modal => {
     if (modal.style.display === 'block') {
