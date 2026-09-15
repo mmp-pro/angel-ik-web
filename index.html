@@ -3,253 +3,408 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angel-ik-Site</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="ANGEL-IK: Artículos de decoración para el hogar, dulceros, recuerdos para eventos, arreglos buchonés, regalos personalizados, catálogo Natura y ropa seleccionada en CDMX.">
+  <meta name="keywords" content="Angel-IK, eventos, dulceros, recuerdos, centros de mesa, adornos, Natura, arreglos buchonés, CDMX">
+  <title>ANGEL-IK 🌸 | Detalles, Eventos, Regalos & Cuidado Personal</title>
+  
+  <!-- Favicon -->
   <link rel="icon" href="img/favicon.png" type="image/png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="navbar">
+  <!-- NAVBAR GLASSMORPHISM -->
+  <header id="navbar" class="navbar">
     <div class="container">
-      <a href="#" class="logo">
-        <img src="img/queen.jpg" alt="Angel-IK Logo" class="nav-logo-img">
-        Angel-IK
+      <a href="#inicio" class="logo">
+        <div class="logo-icon-wrap">
+          <img src="img/queen.jpg" alt="Angel-IK Logo" class="logo-img">
+        </div>
+        <div><span>ANGEL</span>-IK</div>
       </a>
-      <ul id="navLinks" class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#articulos">Artículos de promo</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div id="hamburger" class="hamburger">
-        <span></span><span></span><span></span>
+      
+      <nav id="navLinks" class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#natura">Promos Natura</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <button id="navWishlistBtn" class="nav-wishlist-btn" onclick="toggleWishlistDrawer(true)" title="Ver mis artículos guardados para cotizar">
+          <span>❤️</span>
+          <span class="wishlist-label">Cotización</span>
+          <span id="navWishlistCount" class="wishlist-counter">0</span>
+        </button>
+        
+        <div id="hamburger" class="hamburger" aria-label="Abrir menú" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO / INICIO -->
+  <!-- HERO SECTION -->
   <section id="inicio" class="hero">
+    <div class="hero-shapes">
+      <div class="hero-shape-1"></div>
+      <div class="hero-shape-2"></div>
+    </div>
+    
     <div class="container">
-      <div class="hero-content">
-        <h1>¡Bienvenida al sitio de ANGEL-IK! 🌸</h1>
-        <p>Aquí encontrarás una variable selección de artículos para el hogar, cuidado personal y todo lo que necesitas para hacer tus eventos inolvidables: fiestas, bodas, baby showers y más. Explora nuestra variedad de productos y servicios diseñados especialmente para ti.</p>
-        <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-outline">Contáctame</a>
-          <a href="#productos" class="btn btn-primary">Ver Productos</a>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="badge-pill hero-badge">🌸 Hecho a mano & Diseñado para ti</div>
+          <h1>Detalles que enamoran y hacen tus <span>eventos inolvidables</span></h1>
+          <p>
+            Bienvenida al espacio de <strong>ANGEL-IK</strong>. Creamos piezas únicas para tus fechas más especiales: dulceros temáticos, centros de mesa, recuerdos, arreglos sorpresa, catálogo oficial de belleza Natura y prendas seleccionadas. Todo personalizado con amor y dedicación.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#portafolio" class="btn btn-primary">Explorar Portafolio ✨</a>
+            <a href="https://wa.me/525535865673?text=%C2%A1Hola%20Angel-IK!%20%F0%9F%8C%B8%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20tus%20servicios" target="_blank" rel="noopener" class="btn btn-whatsapp">
+              <span>Cotizar por WhatsApp 💬</span>
+            </a>
+          </div>
+          
+          <div class="hero-features">
+            <div class="feature-pill">
+              <div class="feature-pill-icon">✨</div>
+              <span>100% Personalizado</span>
+            </div>
+            <div class="feature-pill">
+              <div class="feature-pill-icon">🚚</div>
+              <span>Entregas Seguras en CDMX</span>
+            </div>
+            <div class="feature-pill">
+              <div class="feature-pill-icon">💬</div>
+              <span>Atención Rápida</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-main-img-wrap">
+              <img src="img/pared.jpg" alt="Angel-IK Decoración y Eventos" class="hero-main-img">
+            </div>
+            
+            <div class="floating-tag tag-top-right">
+              <div class="floating-tag-icon">🎉</div>
+              <div>
+                <h4>+220 Diseños</h4>
+                <p>En catálogo digital</p>
+              </div>
+            </div>
+            
+            <div class="floating-tag tag-bottom-left">
+              <div class="floating-tag-icon">⭐</div>
+              <div>
+                <h4>Calidad & Detalle</h4>
+                <p>Clientes satisfechos</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTOS -->
-  <section id="productos" class="productos">
+  <!-- SERVICIOS / CATEGORÍAS DESTACADAS -->
+  <section id="servicios" class="servicios">
     <div class="container">
-      <div class="section-title reveal">
+      <div class="section-header reveal">
+        <div class="sub-badge">🌸 LO QUE OFRECEMOS</div>
         <h2>Nuestros Productos y Servicios</h2>
-        <p>Descubre nuestra selección de productos y servicios los cuales ofrezco para ti</p>
+        <p>Descubre cada una de nuestras especialidades creadas con dedicación y estilo para consentirte a ti y a tus seres queridos.</p>
+        <div class="section-divider"><span>🌸</span></div>
       </div>
-      <div class="productos-grid">
-        <div class="producto-card reveal">
+      
+      <div class="servicios-grid">
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">🏡</div>
           <h3>Adornos para el Hogar</h3>
-          <p>Encuentra cuadros decorativos, adornos de pared, centros de mesa y detalles únicos para darle vida y calidez a cada rincón de tu casa.</p>
+          <p>Cuadros decorativos para pared, centros de mesa sofisticados y detalles artesanales para llenar de calidez y buen gusto tu hogar.</p>
+          <a href="#portafolio" onclick="selectCategoryDirectly('hogar')" class="servicio-link">Ver galería de hogar <span>→</span></a>
         </div>
-        <div class="producto-card reveal">
-          <h3>Cuidado Personal</h3>
-          <p>Venta de artículos de la marca "NATURA". Adquiérelos por catálogo o aprovecha nuestras ofertas especiales en productos de belleza y bienestar.</p>
+        
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">🌸</div>
+          <h3>Cuidado Personal Natura</h3>
+          <p>Consultoría y venta de la prestigiada marca Natura: cremas, perfumería fina, maquillaje y cuidado corporal con ofertas especiales de ciclo.</p>
+          <a href="#natura" class="servicio-link">Ver promociones Natura <span>→</span></a>
         </div>
-        <div class="producto-card reveal">
-          <h3>Para tus Fiestas</h3>
-          <p>Ofrecemos invitaciones digitales para toda ocasión, decoración para eventos, mesas de dulces, dulceros personalizados y todo lo necesario para tu celebración.</p>
+        
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">🎉</div>
+          <h3>Para tus Fiestas & Eventos</h3>
+          <p>Todo para celebraciones memorables: dulceros temáticos, recuerdos para toda ocasión, ambientación de salón, mesas de dulces y postres.</p>
+          <a href="#portafolio" onclick="selectCategoryDirectly('fiestas')" class="servicio-link">Ver diseños para fiestas <span>→</span></a>
         </div>
-        <div class="producto-card reveal">
+        
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">🎁</div>
+          <h3>Regalos Personalizados</h3>
+          <p>Sorprende en cualquier fecha especial con ramos buchonés, arreglos de dulces, cajas sorpresa y detalles únicos hechos a la medida.</p>
+          <a href="#portafolio" onclick="selectCategoryDirectly('regalos')" class="servicio-link">Ver opciones de regalos <span>→</span></a>
+        </div>
+        
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">📚</div>
           <h3>Back to School</h3>
-          <p>Todo lo básico para el regreso a clases: cuadernos, plumas, lápices, mochilas y útiles escolares de calidad a excelentes precios.</p>
+          <p>Mochilas, cuadernos, lápices y útiles escolares seleccionados de excelente calidad a precios accesibles para el regreso a clases.</p>
+          <a href="#portafolio" onclick="selectCategoryDirectly('school')" class="servicio-link">Ver útiles escolares <span>→</span></a>
         </div>
-        <div class="producto-card reveal">
-          <h3>Regalos</h3>
-          <p>Creamos trabajos personalizados como arreglos buchonés, ramos de dulces, cajas sorpresa y adornos especiales para sorprender en cualquier fecha.</p>
-        </div>
-        <div class="producto-card reveal">
-          <h3>Ropa de Uso</h3>
-          <p>Prendas cuidadosamente seleccionadas en excelente estado. Ropa de buena calidad a precios accesibles, perfecta para renovar tu armario de forma inteligente.</p>
+        
+        <div class="servicio-card reveal">
+          <div class="servicio-icon">👗</div>
+          <h3>Ropa de Uso & Moda</h3>
+          <p>Prendas para dama y caballero en excelente estado y cuidadosamente seleccionadas, además de accesorios para renovar tu look de forma inteligente.</p>
+          <a href="#portafolio" onclick="selectCategoryDirectly('ropa')" class="servicio-link">Ver catálogo de ropa <span>→</span></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ARTÍCULOS DE PROMO -->
-  <section id="articulos" class="articulos">
+  <!-- SECCIÓN NATURA & ARTÍCULOS DE PROMO -->
+  <section id="natura" class="natura-section">
     <div class="container">
-      <div class="articulos-wrapper">
-        <div class="articulos-image reveal">
-          <img src="img/nat.jpg" alt="Natura Ofertas" loading="lazy" width="600" height="450">
-          <div class="floating-card">
-            <div class="number">Natura</div>
-            <div class="label">Ofertas Especiales</div>
+      <div class="natura-wrapper">
+        <div class="natura-image-box reveal">
+          <img src="img/nat.jpg" alt="Línea y Catálogo Natura" class="natura-img" loading="lazy">
+          <div class="natura-badge-float">
+            <div class="discount">Natura</div>
+            <div class="discount-lbl">Ofertas Exclusivas</div>
           </div>
         </div>
-        <div class="articulos-text reveal">
-          <h2>Natura: <span>Belleza de Línea</span> a Precio Especial </h2>
-          <p>¡Llévate lo mejor de Natura! Encuentra tus productos favoritos de la línea completa (cremas, perfumes, maquillaje y cuidado corporal) a precios increíbles.</p>
-          <p>Calidad premium garantizada con el sello de confianza que te encanta, pero con descuentos exclusivos que no puedes dejar pasar. ¡Renueva tu rutina de belleza hoy mismo!</p>
-          <div class="articulos-stats">
-            <div class="stat"><h3>100%</h3><p>Productos Originales</p></div>
-            <div class="stat"><h3>Línea</h3><p>Completa</p></div>
-            <div class="stat"><h3>Ofertas</h3><p>Exclusivas</p></div>
-             <div class="stat"><h3>Catalogo</h3><p>Siempre lo nuevo</p></div>
+        
+        <div class="natura-content reveal">
+          <div class="badge-pill">🌸 Cuidado Consciente & Belleza</div>
+          <h2>Natura: Belleza de Línea con <span>Precios Especiales</span></h2>
+          <p>
+            Lleva a casa lo más destacado de Natura: perfumería de autor, cremas corporales hidratantes, maquillaje de alta fijación y productos de bienestar con ingredientes sustentables. ¡Pregunta por nuestras promociones y catálogos virtuales vigentes!
+          </p>
+          
+          <div class="natura-perks">
+            <div class="perk-item">
+              <div class="perk-icon">🌿</div>
+              <div>
+                <h4>100% Originales</h4>
+                <p>Productos sellados y directos de fábrica con sello de confianza.</p>
+              </div>
+            </div>
+            
+            <div class="perk-item">
+              <div class="perk-icon">📑</div>
+              <div>
+                <h4>Catálogo Siempre Nuevo</h4>
+                <p>Pide el catálogo digital del ciclo actual en formato PDF.</p>
+              </div>
+            </div>
+            
+            <div class="perk-item">
+              <div class="perk-icon">🎁</div>
+              <div>
+                <h4>Kits & Descuentos</h4>
+                <p>Paquetes armados a precio preferencial para regalo o uso personal.</p>
+              </div>
+            </div>
+            
+            <div class="perk-item">
+              <div class="perk-icon">💬</div>
+              <div>
+                <h4>Asesoría Personalizada</h4>
+                <p>Te recomendamos los aromas y tratamientos ideales para ti.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="natura-actions">
+            <a href="https://wa.me/525535865673?text=%C2%A1Hola%20Angel-IK!%20%F0%9F%8C%B8%20Me%20gustar%C3%ADa%20solicitar%20el%20cat%C3%A1logo%20virtual%20de%20Natura%20en%20PDF%20y%20conocer%20las%20ofertas%20del%20ciclo." target="_blank" rel="noopener" class="btn btn-whatsapp">
+              Solicitar Catálogo en PDF 📑
+            </a>
+            <button onclick="selectCategoryDirectly('natura')" class="btn btn-secondary">
+              Ver en Portafolio 🌸
+            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PORTAFOLIO -->
-  <section id="portafolio" class="portafolio">
+  <!-- EXPLORADOR DE PORTAFOLIO UNIFICADO -->
+  <section id="portafolio" class="portfolio-section">
     <div class="container">
-      <div class="section-title reveal">
-        <h2>Nuestro Portafolio</h2>
-        <p>Haz clic en cada categoría para ver nuestros trabajos</p>
+      <div class="section-header reveal">
+        <div class="sub-badge">📸 CATÁLOGO INTERACTIVO</div>
+        <h2>Explora Nuestro Portafolio</h2>
+        <p>Filtra por categoría, busca diseños por palabra clave o guarda artículos en tu lista con el corazón ❤️ para cotizarlos juntos por WhatsApp.</p>
+        <div class="section-divider"><span>🌸</span></div>
       </div>
-      <div class="portafolio-circles">
-        <div class="circle-item reveal" onclick="openSubcategory('hogar')">
-          <div class="circle-icon"></div>
-          <h3>Adornos para el Hogar</h3>
-          <p>Ver categorías</p>
+      
+      <!-- Controles: Buscador y Filtros -->
+      <div class="portfolio-controls reveal">
+        <div class="search-box-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="portfolioSearch" class="search-input" placeholder="Buscar por dulcero, centro de mesa, regalo, salón, boda, dama...">
+          <button id="searchClearBtn" class="search-clear-btn" onclick="clearPortfolioSearch()" title="Limpiar búsqueda">✕</button>
         </div>
-        <div class="circle-item reveal" onclick="openModal('cuidado')">
-          <div class="circle-icon"></div>
-          <h3>Productos NATURA </h3>
-          <p>Ver fotos</p>
+        
+        <!-- Píldoras de Categorías Principales -->
+        <div id="categoryPills" class="category-pills">
+          <!-- Generadas dinámicamente con JavaScript -->
         </div>
-        <div class="circle-item reveal" onclick="openSubcategory('fiestas')">
-          <div class="circle-icon"></div>
-          <h3>Para tus Fiestas</h3>
-          <p>Ver categorías</p>
+        
+        <!-- Subcategorías Dinámicas -->
+        <div id="subcatPillsWrap" class="subcat-pills-wrap">
+          <!-- Generadas dinámicamente según la categoría activa -->
         </div>
-        <div class="circle-item reveal" onclick="openModal('school')">
-          <div class="circle-icon"></div>
-          <h3>Back to School</h3>
-          <p>Ver fotos</p>
+        
+        <div class="portfolio-meta">
+          <div id="resultsCount" class="results-count">Mostrando <strong>0</strong> diseños</div>
+          <button id="quickWishlistBtn" class="btn btn-sm btn-secondary" onclick="toggleWishlistDrawer(true)">
+            <span>❤️ Ver Lista de Cotización</span>
+          </button>
         </div>
-        <div class="circle-item reveal" onclick="openModal('regalos')">
-          <div class="circle-icon"></div>
-          <h3>Regalos</h3>
-          <p>Ver fotos</p>
-        </div>
-        <div class="circle-item reveal" onclick="openSubcategory('ropa')">
-          <div class="circle-icon"></div>
-          <h3>Ropa de Uso</h3>
-          <p>Ver categorías</p>
-        </div>
+      </div>
+      
+      <!-- Rejilla de la Galería -->
+      <div id="galleryGrid" class="gallery-grid">
+        <!-- Renderizado dinámico de tarjetas -->
+      </div>
+      
+      <!-- Botón Cargar Más -->
+      <div id="loadMoreWrap" class="load-more-wrap">
+        <button id="loadMoreBtn" class="btn btn-secondary" onclick="loadMoreItems()">
+          Cargar más diseños ✨
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIOS -->
-  <section class="testimonios">
+  <!-- TESTIMONIOS CON CARRUSEL INTERACTIVO -->
+  <section id="testimonios" class="testimonios-section">
     <div class="container">
-      <div class="section-title reveal">
+      <div class="section-header reveal">
+        <div class="sub-badge">⭐ CLIENTES FELICES</div>
         <h2>Lo que dicen nuestros clientes</h2>
-        <p>Testimonios reales de quienes han confiado en nosotros</p>
+        <p>Testimonios reales de personas que han confiado en el trabajo, detalle y compromiso de Angel-IK.</p>
+        <div class="section-divider"><span>🌸</span></div>
       </div>
-      <div class="testimonios-grid">
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"La calidad de los productos y la atención personalizada superaron todas mis expectativas. ¡Totalmente recomendado!"</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">MC</div>
-            <div class="author-info">
-              <h4>María Castillo</h4>
-              <span>Cliente VIP</span>
-            </div>
-          </div>
+      
+      <div class="testimonials-slider reveal">
+        <div id="testimonialsTrack" class="testimonials-track">
+          <!-- Inyectado dinámicamente por script.js -->
         </div>
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"Los artículos de promoción son increíbles. Siempre encuentro ofertas que realmente valen la pena y la entrega es rápida."</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">RR</div>
-            <div class="author-info">
-              <h4>Roxana Rodríguez</h4>
-              <span>Emprendedora</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"Su portafolio habla por sí solo. Profesionales, creativos y con un toque único que marca la diferencia en cada proyecto."</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">AS</div>
-            <div class="author-info">
-              <h4>Ana Schultz</h4>
-              <span>Vendedora por Facebook</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"Muy buena consultoral Natura y produtos de Ofertas muy buenos."</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">TR</div>
-            <div class="author-info">
-              <h4>Thalia Rodríguez</h4>
-              <span>Ing Textil</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"Siempre un buen servicio y garantizado su trabajo."</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">AC</div>
-            <div class="author-info">
-              <h4>Aranza Cárdenas</h4>
-              <span>Hogar</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonio-card reveal">
-          <div class="stars">★★★★★</div>
-          <p>"Sin duda su trabajo respalda su profesionalismo en cada detalle."</p>
-          <div class="testimonio-author">
-            <div class="author-avatar">PJ</div>
-            <div class="author-info">
-              <h4>Patricia Johnson</h4>
-              <span>C.P.</span>
-            </div>
-          </div>
+        
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevTestimonialBtn" onclick="moveTestimonial(-1)" aria-label="Testimonio anterior">❮</button>
+          <div id="sliderDots" class="slider-dots"></div>
+          <button class="slider-btn" id="nextTestimonialBtn" onclick="moveTestimonial(1)" aria-label="Testimonio siguiente">❯</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
+  <!-- SECCIÓN DE CONTACTO -->
+  <section id="contacto" class="contacto-section">
     <div class="container">
-      <div class="section-title reveal">
-        <h2>Contáctanos</h2>
-        <p>¿Tienes un evento ó quieres algo especial?</p><p>¡enviame un mensaje y tu imagen de lo que buscas y lo hacemos realidad!</p>
+      <div class="section-header reveal">
+        <div class="sub-badge">💬 ATENCIÓN INMEDIATA</div>
+        <h2>¿Tienes un evento o buscas algo especial?</h2>
+        <p>Envíanos un mensaje con tu idea o tus preguntas y te responderemos a la brevedad con tu cotización.</p>
+        <div class="section-divider"><span>🌸</span></div>
       </div>
-      <div class="contacto-wrapper">
-        <div class="contacto-info reveal">
-          <h3>Información personalizada</h3>
-          <p>Completa el formulario y nuestro equipo se pondrá en contacto contigo en menos de 24 horas.</p>
-          <div class="info-item"><div class="info-icon">📍</div><div><h4>Dirección</h4><p>Sebastian de Aparicio, Col Minas de Cristo Rey, CDMX</p></div></div>
-          <div class="info-item"><div class="info-icon">📧</div><div><h4>Email</h4><p>angelikamendoza65656@gmail.com</p></div></div>
-          <div class="info-item"><div class="info-icon">📞</div><div><h4>Teléfono</h4><p>+52 5535865673</p></div></div>
-          <div class="info-item"><div class="info-icon">🕐</div><div><h4>Horario</h4><p>Lun - Vie: 12:00 - 18:00</p></div></div>
-        </div>
-        <form id="contactForm" class="contacto-form reveal">
-          <div class="form-row">
-            <div class="form-group"><label for="name">Nombre</label><input type="text" id="name" placeholder="Tu nombre" required></div>
-            <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="tu@email.com" required></div>
+      
+      <div class="contacto-grid">
+        <div class="contacto-card-info reveal">
+          <h3>Información de Contacto</h3>
+          <p>Estamos a tu servicio para resolver dudas, tomar pedidos personalizados y planear los detalles de tu evento.</p>
+          
+          <div class="contact-items-list">
+            <div class="contact-item-row">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <h4>Ubicación</h4>
+                <p>Sebastian de Aparicio, Col. Minas de Cristo Rey, CDMX</p>
+              </div>
+            </div>
+            
+            <div class="contact-item-row">
+              <div class="contact-item-icon">📱</div>
+              <div class="contact-item-text">
+                <h4>WhatsApp Directo</h4>
+                <p>+52 55 3586 5673</p>
+              </div>
+            </div>
+            
+            <div class="contact-item-row">
+              <div class="contact-item-icon">📧</div>
+              <div class="contact-item-text">
+                <h4>Correo Electrónico</h4>
+                <p>angelikamendoza65656@gmail.com</p>
+              </div>
+            </div>
+            
+            <div class="contact-item-row">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <h4>Horario de Atención</h4>
+                <p>Lunes a Viernes: 12:00 - 18:00 hrs</p>
+              </div>
+            </div>
           </div>
-          <div class="form-group"><label for="subject">Asunto</label><input type="text" id="subject" placeholder="¿En qué podemos ayudarte?" required></div>
-          <div class="form-group"><label for="message">Mensaje</label><textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea></div>
-          <button type="submit" class="btn btn-primary">Enviar Mensaje ✉️</button>
-        </form>
+          
+          <a href="https://wa.me/525535865673?text=%C2%A1Hola%20Angel-IK!%20%F0%9F%8C%B8%20Me%20gustar%C3%ADa%20hacer%20una%20consulta%20directa." target="_blank" rel="noopener" class="btn btn-whatsapp" style="margin-top: auto;">
+            Escribir por WhatsApp Directo 💬
+          </a>
+        </div>
+        
+        <div class="contacto-form-card reveal">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nombre Completo *</label>
+                <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono / WhatsApp *</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Tu número" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="serviceCategory">Categoría de Interés</label>
+              <select id="serviceCategory" class="form-control">
+                <option value="Eventos y Fiestas">Para tus Fiestas (Dulceros, Recuerdos, Mesas)</option>
+                <option value="Adornos para el Hogar">Adornos para el Hogar (Pared, Centros)</option>
+                <option value="Productos Natura">Cosméticos y Catálogo Natura</option>
+                <option value="Regalos Personalizados">Regalos (Ramos Buchonés, Cajas)</option>
+                <option value="Back to School">Útiles Escolares</option>
+                <option value="Ropa de Uso">Ropa de Uso & Accesorios</option>
+                <option value="Otro">Otro pedido especial</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensaje / Detalles de lo que buscas *</label>
+              <textarea id="message" class="form-control" placeholder="Cuéntanos fecha del evento, cantidad requerida o cualquier detalle especial..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Preparar Mensaje para WhatsApp 💬
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -259,406 +414,135 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">✦ Angelik-Page</a>
-          <p>Transformamos ideas en experiencias digitales excepcionales. Tu éxito es nuestra pasión.</p>
-          <div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">💼</a></div>
+          <a href="#inicio" class="logo">
+            <div class="logo-icon-wrap" style="border-color: var(--accent-blush);">
+              <img src="img/queen.jpg" alt="Angel-IK Logo" class="logo-img">
+            </div>
+            <span>ANGEL-IK</span>
+          </a>
+          <p>
+            Creamos momentos especiales con detalles únicos hechos a mano. Decoración para eventos, recuerdos, regalos y catálogo de belleza Natura en Ciudad de México.
+          </p>
+          <div class="social-links">
+            <a href="https://wa.me/525535865673" target="_blank" rel="noopener" class="social-link" title="WhatsApp">💬</a>
+            <a href="mailto:angelikamendoza65656@gmail.com" class="social-link" title="Email">📧</a>
+            <a href="#contacto" class="social-link" title="Ubicación">📍</a>
+          </div>
         </div>
+        
         <div>
-          <h4>Empresa</h4>
-          <ul><li><a href="#articulos">Artículos de promo</a></li><li><a href="#portafolio">Portafolio</a></li><li><a href="#">Blog</a></li><li><a href="#">Carreras</a></li></ul>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#natura">Natura</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+          </ul>
         </div>
+        
         <div>
-          <h4>Productos</h4>
-          <ul><li><a href="#productos">Moda & Estilo</a></li><li><a href="#productos">Belleza</a></li><li><a href="#productos">Accesorios</a></li><li><a href="#productos">Ofertas</a></li></ul>
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="#portafolio" onclick="selectCategoryDirectly('fiestas')">Para tus Fiestas</a></li>
+            <li><a href="#portafolio" onclick="selectCategoryDirectly('hogar')">Adornos de Hogar</a></li>
+            <li><a href="#portafolio" onclick="selectCategoryDirectly('regalos')">Regalos Especiales</a></li>
+            <li><a href="#portafolio" onclick="selectCategoryDirectly('natura')">Productos Natura</a></li>
+            <li><a href="#portafolio" onclick="selectCategoryDirectly('school')">Back to School</a></li>
+          </ul>
         </div>
+        
         <div>
-          <h4>Legal</h4>
-          <ul><li><a href="#">Privacidad</a></li><li><a href="#">Términos</a></li><li><a href="#">Cookies</a></li><li><a href="#">Licencias</a></li></ul>
+          <h4>Atención</h4>
+          <ul>
+            <li><a href="#contacto">Contacto directo</a></li>
+            <li><a href="https://wa.me/525535865673" target="_blank" rel="noopener">Pedir Cotización</a></li>
+            <li><a href="https://wa.me/525535865673?text=Quiero%20el%20catalogo%20Natura" target="_blank" rel="noopener">Catálogo Natura</a></li>
+            <li><a href="#" onclick="toggleWishlistDrawer(true); return false;">Mi Cotización</a></li>
+          </ul>
         </div>
       </div>
+      
       <div class="footer-bottom">
-        <p>© 2026 Angelik-Page. Todos los derechos reservados. Hecho por MPX 🌸</p>
+        <p>© 2026 ANGEL-IK. Todos los derechos reservados. Diseñado con amor 🌸</p>
       </div>
     </div>
   </footer>
 
-  <!-- SCROLL TO TOP -->
-  <button id="scrollTop" class="scroll-top">↑</button>
-
-  <!-- MODALES DE SUBCATEGORÍAS -->
-  <div id="subcategory-hogar" class="modal subcategory-modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeSubcategory('hogar')">&times;</span>
-      <h2> Adornos para el Hogar</h2>
-      <p>Selecciona una categoría</p>
-      <div class="subcategory-grid">
-        <div class="subcategory-card" onclick="openModal('hogar-pared')"><div class="subcategory-icon">🖼️</div><h3>Para tu Pared</h3><p>Cuadros y adornos decorativos</p></div>
-        <div class="subcategory-card" onclick="openModal('hogar-mesa')"><div class="subcategory-icon">🪴</div><h3>Centros de Mesa</h3><p>Decoración para mesas</p></div>
-        <div class="subcategory-card" onclick="openModal('hogar-general')"><div class="subcategory-icon">✨</div><h3>Decoración General</h3><p>Adornos varios para el hogar</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="subcategory-fiestas" class="modal subcategory-modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeSubcategory('fiestas')">&times;</span>
-      <h2> Para tus Fiestas</h2>
-      <p>Selecciona una categoría</p>
-      <div class="subcategory-grid">
-        <div class="subcategory-card" onclick="openModal('fiestas-invitaciones')"><div class="subcategory-icon"></div><h3>Invitaciones Digitales</h3><p>Diseños para toda ocasión</p></div>
-        <div class="subcategory-card" onclick="openModal('fiestas-mesas')"><div class="subcategory-icon"></div><h3>Mesas de Dulces</h3><p>Decoración para tu Fiesta</p></div>
-        <div class="subcategory-card" onclick="openModal('fiestas-decoracion')"><div class="subcategory-icon"></div><h3>Decoración de Eventos</h3><p>Adornos para fiestas</p></div>
-        <div class="subcategory-card" onclick="openModal('fiestas-dulceros')"><div class="subcategory-icon"></div><h3>Dulceros para toda ocasión</h3><p>Adornos para fiestas</p></div>
-      </div>
-    </div>
-  </div>
-
-  <div id="subcategory-ropa" class="modal subcategory-modal">
-    <div class="modal-content">
-      <span class="close-modal" onclick="closeSubcategory('ropa')">&times;</span>
-      <h2> Ropa de Uso</h2>
-      <p>Selecciona una categoría</p>
-      <div class="subcategory-grid">
-        <div class="subcategory-card" onclick="openModal('ropa-dama')"><div class="subcategory-icon"></div><h3>Dama</h3><p>Prendas para mujer</p></div>
-        <div class="subcategory-card" onclick="openModal('ropa-caballero')"><div class="subcategory-icon"></div><h3>Caballero</h3><p>Prendas para hombre</p></div>
-        <div class="subcategory-card" onclick="openModal('ropa-accesorios')"><div class="subcategory-icon"></div><h3>Accesorios</h3><p>Bolsos, cinturones, etc.</p></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== MODALES DE GALERÍA (CON TUS FOTOS - VÍNCULOS INTACTOS) ===== -->
-
-<!-- HOGAR -->
-<div id="modal-hogar-pared" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('hogar-pared')">&times;</span>
-    <h2> Para tu Pared</h2>
-    <p>Cuadros y adornos decorativos ANGEL-IK</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Adorno/ad009.webp" alt="Adorno9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado10.webp" alt="Adorn10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado11.webp" alt="Adorno11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado12.webp" alt="Adorno12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado13.webp" alt="Adorno13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado14.webp" alt="Adorno14" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ado15.webp" alt="Adorno15" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-hogar-mesa" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('hogar-mesa')">&times;</span>
-    <h2> Centros de Mesa</h2>
-    <p>Decoración para mesas</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Centros/cm001.webp" alt="ctr1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm002.webp" alt="ctr2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm012.webp" alt="ctr12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm004.webp" alt="ctr4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm005.webp" alt="ctr5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm006.webp" alt="ctr6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm007.webp" alt="ctr7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm008.webp" alt="ctr8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm009.webp" alt="ctr9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm010.webp" alt="ctr10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm011.webp" alt="ctr11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm003.webp" alt="ctr3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm013.webp" alt="ctr13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Centros/cm014.webp" alt="ctr14" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-hogar-general" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('hogar-general')">&times;</span>
-    <h2> Decoración General</h2>
-    <p>Adornos varios para el hogar</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Adorno/ad001.webp" alt="Adorno1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad002.webp" alt="Adorno2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad003.webp" alt="Adorno3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad004.webp" alt="Adorno4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad005.webp" alt="Adorno5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad006.webp" alt="Adorno6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad007.webp" alt="Adorno7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Adorno/ad008.webp" alt="Adorno8" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<!-- FIESTAS -->
-<div id="modal-fiestas-invitaciones" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('fiestas-invitaciones')">&times;</span>
-    <h2> Invitaciones Digitales</h2>
-    <p>Diseños para toda ocasión</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Invitaciones/invi001.webp" alt="Invitacion1" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-fiestas-mesas" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('fiestas-mesas')">&times;</span>
-    <h2> Mesas de Dulces</h2>
-    <p>Decoración y dulceros</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Arreglos/arr001.webp" alt="Arreglo 1" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-fiestas-decoracion" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('fiestas-decoracion')">&times;</span>
-    <h2> Decoración de Eventos</h2>
-    <p>Adornos para fiestas</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Salon/sal001.webp" alt="Salon1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal002.webp" alt="Salon2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal003.webp" alt="Salon3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal004.webp" alt="Salon4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal005.webp" alt="Salon5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal006.webp" alt="Salon6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal007.webp" alt="Salon7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal008.webp" alt="Salon8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Salon/sal010.webp" alt="Salon10" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-  
-<div id="modal-fiestas-dulceros" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('fiestas-dulceros')">&times;</span>
-    <h2> Dulceros</h2>
-    <p>Dulceros para fiestas y todo tipo de eventos</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Dulceros/dul001.webp" alt="Dulcero1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul002.webp" alt="Dulcero2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul003.webp" alt="Dulcero3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul004.webp" alt="Dulcero4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul005.webp" alt="Dulcero5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul006.webp" alt="Dulcero6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul007.webp" alt="Dulcero7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul008.webp" alt="Dulcero8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul009.webp" alt="Dulcero9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul010.webp" alt="Dulcero10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul011.webp" alt="Dulcero11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul012.webp" alt="Dulcero12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul013.webp" alt="Dulcero13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul014.webp" alt="Dulcero14" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul015.webp" alt="Dulcero15" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul016.webp" alt="Dulcero16" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul017.webp" alt="Dulcero17" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul018.webp" alt="Dulcero18" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul019.webp" alt="Dulcero19" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul020.webp" alt="Dulcero20" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul021.webp" alt="Dulcero21" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul022.webp" alt="Dulcero22" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul023.webp" alt="Dulcero23" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul024.webp" alt="Dulcero24" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul025.webp" alt="Dulcero25" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul026.webp" alt="Dulcero26" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul027.webp" alt="Dulcero27" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul028.webp" alt="Dulcero28" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul029.webp" alt="Dulcero29" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul030.webp" alt="Dulcero30" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul031.webp" alt="Dulcero31" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul032.webp" alt="Dulcero32" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul033.webp" alt="Dulcero33" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul034.webp" alt="Dulcero34" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul035.webp" alt="Dulcero35" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul036.webp" alt="Dulcero36" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul037.webp" alt="Dulcero37" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul038.webp" alt="Dulcero38" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul039.webp" alt="Dulcero39" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul040.webp" alt="Dulcero40" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul041.webp" alt="Dulcero41" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul042.webp" alt="Dulcero42" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul043.webp" alt="Dulcero43" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul044.webp" alt="Dulcero44" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul045.webp" alt="Dulcero45" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul046.webp" alt="Dulcero46" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul047.webp" alt="Dulcero47" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul048.webp" alt="Dulcero48" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul049.webp" alt="Dulcero49" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul050.webp" alt="Dulcero50" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul051.webp" alt="Dulcero51" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul052.webp" alt="Dulcero52" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul053.webp" alt="Dulcero53" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul054.webp" alt="Dulcero54" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul055.webp" alt="Dulcero55" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul056.webp" alt="Dulcero56" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul057.webp" alt="Dulcero57" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul058.webp" alt="Dulcero58" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul059.webp" alt="Dulcero59" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul060.webp" alt="Dulcero60" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul061.webp" alt="Dulcero61" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul062.webp" alt="Dulcero62" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul063.webp" alt="Dulcero63" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul064.webp" alt="Dulcero64" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Dulceros/dul065.webp" alt="Dulcero65" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ROPA -->
-<div id="modal-ropa-dama" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('ropa-dama')">&times;</span>
-    <h2> Ropa Dama</h2>
-    <p>Prendas para mujer</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Ropa/rop002.webp" alt="Ropa2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop003.webp" alt="Ropa3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop004.webp" alt="Ropa4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop005.webp" alt="Ropa5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop006.webp" alt="Ropa6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop007.webp" alt="Ropa7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop008.webp" alt="Ropa8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop009.webp" alt="Ropa9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop010.webp" alt="Ropa10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop011.webp" alt="Ropa11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop012.webp" alt="Ropa12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop013.webp" alt="Ropa13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop014.webp" alt="Ropa14" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop015.webp" alt="Ropa15" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop016.webp" alt="Ropa16" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop021.webp" alt="Ropa21" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-ropa-caballero" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('ropa-caballero')">&times;</span>
-    <h2> Ropa Caballero</h2>
-    <p>Prendas para hombre</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Ropa/rop001.webp" alt="Ropa1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop017.webp" alt="Ropa17" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop018.webp" alt="Ropa18" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop019.webp" alt="Ropa19" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop020.webp" alt="Ropa20" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-ropa-accesorios" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('ropa-accesorios')">&times;</span>
-    <h2> Accesorios</h2>
-    <p>Bolsos, cinturones, etc.</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Ropa/rop022.webp" alt="Ropa22" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Ropa/rop023.webp" alt="Ropa23" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<!-- DIRECTOS -->
-<div id="modal-cuidado" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('cuidado')">&times;</span>
-    <h2> Cuidado Personal - Natura</h2>
-    <p>Cremas, perfumes, maquillaje y productos de belleza</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="https://via.placeholder.com/400x300/d63384/ffffff?text=Natura+1" alt="Natura 1" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-school" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('school')">&times;</span>
-    <h2> Back to School</h2>
-    <p>Cuadernos, plumas, lápices y útiles escolares</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs001.webp" alt="Regreso1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs002.webp" alt="Regreso2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs003.webp" alt="Regreso3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs004.webp" alt="Regreso4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs005.webp" alt="Regreso5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs005.webp" alt="Regreso5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs006.webp" alt="Regreso6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs007.webp" alt="Regreso7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs008.webp" alt="Regreso8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs009.webp" alt="Regreso9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs010.webp" alt="Regreso10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs011.webp" alt="Regreso11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs012.webp" alt="Regreso12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs013.webp" alt="Regreso13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs014.webp" alt="Regreso14" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs015.webp" alt="Regreso15" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs016.webp" alt="Regreso16" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs017.webp" alt="Regreso17" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs018.webp" alt="Regreso18" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Backtoschool/bs019.webp" alt="Regreso19" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-
-<div id="modal-regalos" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('regalos')">&times;</span>
-    <h2> Regalos Personalizados</h2>
-    <p>Arreglos buchonés, ramos de dulces, cajas sorpresa</p>
-    <div class="modal-gallery">
-      <div class="gallery-item"><img src="Photo/Regalos/reg001.webp" alt="regalo1" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg002.webp" alt="regalo2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg003.webp" alt="regalo3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg004.webp" alt="regalo4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg005.webp" alt="regalo5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg006.webp" alt="regalo6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg007.webp" alt="regalo7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg008.webp" alt="regalo8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg009.webp" alt="regalo9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg010.webp" alt="regalo10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg011.webp" alt="regalo11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg012.webp" alt="regalo12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg013.webp" alt="regalo13" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg014.webp" alt="regalo14" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg015.webp" alt="regalo15" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg016.webp" alt="regalo16" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg017.webp" alt="regalo17" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg018.webp" alt="regalo18" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg019.webp" alt="regalo19" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg020.webp" alt="regalo20" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg021.webp" alt="regalo21" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg022.webp" alt="regalo22" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg023.webp" alt="regalo23" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg024.webp" alt="regalo24" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Regalos/reg025.webp" alt="regalo25" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr002.webp" alt="Arreglo 2" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr003.webp" alt="Arreglo 3" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr004.webp" alt="Arreglo 4" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr005.webp" alt="Arreglo 5" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr006.webp" alt="Arreglo 6" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr007.webp" alt="Arreglo 7" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr008.webp" alt="Arreglo 8" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr009.webp" alt="Arreglo 9" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr010.webp" alt="Arreglo 10" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr011.webp" alt="Arreglo 11" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr012.webp" alt="Arreglo 12" loading="lazy" decoding="async" width="400" height="300"></div>
-      <div class="gallery-item"><img src="Photo/Arreglos/arr013.webp" alt="Arreglo 13" loading="lazy" decoding="async" width="400" height="300"></div>
-    </div>
-  </div>
-</div>
-  
-  <!-- LIGHTBOX CON CARRUSEL (ESTRUCTURA CORREGIDA) -->
+  <!-- LIGHTBOX CON VISOR MODERNO -->
   <div id="lightbox" class="lightbox-overlay">
-    <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">❮</button>
-    <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">❯</button>
-    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-img" src="" alt="Imagen ampliada">
-    <div class="lightbox-counter">
-      <span id="current-img">1</span> / <span id="total-imgs">10</span>
+    <div class="lightbox-topbar">
+      <div class="lightbox-badge-info">
+        <span id="lightboxCategory" class="badge-pill">Categoría</span>
+        <span class="lightbox-counter"><span id="current-img">1</span> / <span id="total-imgs">1</span></span>
+      </div>
+      <button class="lightbox-close" onclick="closeLightbox()" title="Cerrar (Esc)">&times;</button>
+    </div>
+    
+    <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)" aria-label="Imagen anterior">❮</button>
+    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)" aria-label="Imagen siguiente">❯</button>
+    
+    <div class="lightbox-body">
+      <img id="lightbox-img" src="" alt="Imagen ampliada de Angel-IK">
+    </div>
+    
+    <div class="lightbox-footer">
+      <h3 id="lightboxTitle" class="lightbox-title">Título del Diseño</h3>
+      <div class="lightbox-actions">
+        <button id="lightboxWishlistBtn" class="btn btn-sm btn-secondary" onclick="toggleCurrentLightboxWishlist()">
+          <span>❤️ Guardar en Cotización</span>
+        </button>
+        <button id="lightboxQuoteBtn" class="btn btn-sm btn-whatsapp" onclick="quoteCurrentLightboxItem()">
+          <span>Cotizar por WhatsApp 💬</span>
+        </button>
+      </div>
     </div>
   </div>
 
+  <!-- DRAWER LATERAL DE LA LISTA DE COTIZACIÓN (WISHLIST) -->
+  <div id="wishlistOverlay" class="wishlist-overlay" onclick="toggleWishlistDrawer(false)"></div>
+  <aside id="wishlistDrawer" class="wishlist-drawer">
+    <div class="drawer-header">
+      <h3><span>❤️</span> Mi Lista de Cotización</h3>
+      <button class="drawer-close" onclick="toggleWishlistDrawer(false)" title="Cerrar">&times;</button>
+    </div>
+    
+    <div id="drawerBody" class="drawer-body">
+      <!-- Items agregados se inyectan dinámicamente -->
+    </div>
+    
+    <div id="drawerFooter" class="drawer-footer">
+      <label for="drawerNotes" style="font-size: 0.85rem; font-weight: 700; display: block; margin-bottom: 6px;">
+        Notas adicionales para tu cotización:
+      </label>
+      <textarea id="drawerNotes" class="drawer-notes" placeholder="Ej. Fecha de mi evento, cantidad aproximada de dulceros o recuerdos, colores..."></textarea>
+      
+      <div class="drawer-actions">
+        <button id="sendWishlistQuoteBtn" class="btn btn-whatsapp" onclick="sendWishlistViaWhatsApp()" style="width: 100%;">
+          <span>Enviar Lista por WhatsApp 💬</span>
+        </button>
+        <button class="btn btn-sm btn-secondary" onclick="clearWishlist()" style="width: 100%; border: none;">
+          Vaciar lista
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- BOTÓN FLOTANTE DE COTIZACIÓN -->
+  <button id="floatingWishlistBtn" class="floating-wishlist-btn" onclick="toggleWishlistDrawer(true)" title="Ver mi lista de cotización">
+    <span>❤️</span>
+    <span>Cotización</span>
+    <span id="floatingWishlistCount" class="wishlist-counter">0</span>
+  </button>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="scrollTop" class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Volver arriba">↑</button>
+
+  <!-- CONTENEDOR DE TOAST NOTIFICATIONS -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- SCRIPTS -->
+  <script src="catalog-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
